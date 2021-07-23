@@ -5,6 +5,7 @@ import './style.css';
 
 export default function App() {
   const getData = () => {
+    if (searchId == '' || !/^\d{1,5}$/.test(searchId)) return;
     setLoading(true);
     return fetch(
       `https://jsonplaceholder.typicode.com/albums/${searchId}/photos`
@@ -23,7 +24,6 @@ export default function App() {
   const handleChange = evt => {
     setSearchId(evt.target.value);
   };
-  console.log('albums', albums);
   return (
     <div>
       <header className="header">
