@@ -27,6 +27,7 @@ export default function App() {
   return (
     <div>
       <header className="header">
+        <p className="logo">Code With Nelly</p>
         <div className="input-group">
           <input
             type="text"
@@ -40,16 +41,15 @@ export default function App() {
           </button>
         </div>
       </header>
-      <div className="data">
-        {loading && 'Loading Please wait'}
-        {!loading && albums.length != 0 ? (
-          albums.map((el, i) => {
-            return <Card key={i} src={el.thumbnailUrl} />;
-          })
-        ) : (
-          <p className="no_result">No Results found!</p>
-        )}
-      </div>
+      {loading && <p className="no_result">Loading please wait!</p>}
+      {!loading && albums.length != 0 && (
+        <div className="data">
+          {' '}
+          {albums.map((el, i) => {
+            return <Card key={i} {...el} />;
+          })}{' '}
+        </div>
+      )}
     </div>
   );
 }

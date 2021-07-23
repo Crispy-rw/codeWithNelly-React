@@ -160,14 +160,14 @@ body {
 }
 
 .header {
-  height: 100px;
-  background-color: red;
+  height: 50px;
+  background-color: rgba(49, 47, 47, 0.89);
 }
 
 .input {
-  margin-top: 50px;
   margin-right: 10px;
-  height: 35px;
+  margin-top: 10px;
+  height: 30px;
   border: 0.5px solid rgba(0, 0, 0, 0.219);
   border-radius: 5px;
   font-size: 20px;
@@ -176,18 +176,22 @@ body {
 
 .input-group {
   float: right;
+  margin-right: 20px;
 }
 .btn {
-  height: 35px;
+  height: 30px;
   width: 100px;
   margin-bottom: 2px;
 }
 
 .card {
-  height: 200px;
+  height: fit-content;
   width: 150px;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
+  background-color: rgba(86, 86, 92, 0.26);
+  overflow: hidden;
+  color: black;
 }
 
 .card img {
@@ -197,6 +201,7 @@ body {
 
 .card p {
   text-align: center;
+  word-wrap: break-word;
 }
 
 .data {
@@ -204,8 +209,18 @@ body {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: auto;
 }
 
 .no_result {
   margin-top: 200px;
+  text-align: center;
+}
+
+.logo {
+  float: left;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
 }

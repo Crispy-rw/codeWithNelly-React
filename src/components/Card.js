@@ -4,8 +4,8 @@ import '../style.css';
 const Card = props => {
   return (
     <div className="card">
-      <img src={props.src} alt="alt img" />
-      <p>Test Test title</p>
+      <img src={props.thumbnailUrl} alt="alt img" />
+      <p>{props.title}</p>
     </div>
   );
 };
