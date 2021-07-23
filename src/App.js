@@ -50,6 +50,9 @@ export default function App() {
           })}{' '}
         </div>
       )}
+      {!loading && albums.length == 0 && (
+        <p className="no_result"> Not Data Found! Search </p>
+      )}
     </div>
   );
 }
